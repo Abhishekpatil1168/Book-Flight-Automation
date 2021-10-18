@@ -34,6 +34,8 @@ namespace HappyFlight
 
             if (String.Equals(ch, "1"))
             {
+                Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
                 oneway = true;
                 roundtrip = false;
             }
@@ -62,6 +64,8 @@ namespace HappyFlight
                 {
                     Console.WriteLine("Enter Which City you want correctly :: ");
                     str_toCityChoiceNumber = Console.ReadLine();
+                    Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
                 }
             } while (!( String.Equals(str_toCityChoiceNumber, "1") || String.Equals(str_toCityChoiceNumber, "2") || String.Equals(str_toCityChoiceNumber, "3") || String.Equals(str_toCityChoiceNumber, "4") || String.Equals(str_fromCityChoiceNumber, "5")));
             Console.WriteLine("\n________________________________________________________________________________________________________________\n");                             
@@ -90,7 +94,8 @@ namespace HappyFlight
             } while (!(String.Equals(nameClassChoice, "1") || String.Equals(nameClassChoice, "2") || String.Equals(nameClassChoice, "3") || String.Equals(nameClassChoice, "4")));
             
             Console.WriteLine("\n________________________________________________________________________________________________________________\n");
-
+Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
             Console.Write("Enter Number of ADULTS: \n ");
             while (!(UInt32.TryParse(Console.ReadLine(), out numberofAdults) && numberofAdults <= 9))
                 Console.Write("The value must be of positive integer type &<={0}, try again:\n",9);
@@ -102,6 +107,8 @@ namespace HappyFlight
             Console.Write("Enter Number of Infants: \n ");
             while (!(UInt32.TryParse(Console.ReadLine(), out numberofInfants) && numberofInfants <= 6))
                 Console.Write("The value must be of positive integer type & <={0}, try again:\n", 6);
+            Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
             Console.WriteLine("\n________________________________________________________________________________________________________________");
             Console.WriteLine("\n________________________________________________________________________________________________________________\n");
 
@@ -120,6 +127,8 @@ namespace HappyFlight
                 else
                 {
                     return false;
+                    Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
                 }
             }
             catch (Exception e)
