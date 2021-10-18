@@ -20,6 +20,11 @@ namespace HappyFlight
                 Console.WriteLine("PROGRAM SUCCESSFULLY EXECUTED\n\n");
             else
                 Console.WriteLine("\n PROGRAM NOT* SUCCESSFULLY EXECUTED\n\n");
+            do
+            {
+                Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
+            } while (!(String.Equals(ch, "1") || String.Equals(ch, "2")));
         }
 
         public static void GetInfo(out bool oneway, out bool roundtrip, out string str_fromCityChoiceNumber, out string str_toCityChoiceNumber, out string toDepartureDateChoice, out string toReturnDateChoice , out string nameClassChoice, out uint numberofAdults, out uint numberofChildren, out uint numberofInfants)
@@ -133,6 +138,11 @@ Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: 
             }
             catch (Exception e)
             {
+                do
+            {
+                Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
+            } while (!(String.Equals(ch, "1") || String.Equals(ch, "2")));
                 Console.WriteLine("FAILURE::URL did not load/valid: " + Global.test_url);
                 return false;
             }
@@ -144,6 +154,11 @@ Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: 
             {
                 if (Global.driver.FindElement(by) != null)
                 {
+                    do
+            {
+                Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
+            } while (!(String.Equals(ch, "1") || String.Equals(ch, "2")));
                     return true;
                 }
                 else
@@ -178,6 +193,11 @@ Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: 
             }
             catch
             {
+                do
+            {
+                Console.WriteLine("Enter Which TripType you want: \nOneWay: Press 1\nRoundTrip: Press 2:");
+                ch = Console.ReadLine();
+            } while (!(String.Equals(ch, "1") || String.Equals(ch, "2")));
                 throw new TestException("ClickIfPresent did not load");
             }
         }
